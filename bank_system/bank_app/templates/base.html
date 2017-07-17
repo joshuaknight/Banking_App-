@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>	
+	<head>
+		{% block head %}
+		<title>{% block title %}{% endblock %}</title>
+		{% endblock %}
+	</head>	
+	<body>{% block main_content %}{% endblock %}</body>	
+
+	{% load staticfiles %}
+	<script type="text/javascript" src="{% static 'javascript/jquery-3.2.1.min.js' %}"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-theme.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<script type="text/javascript" src="{% static 'javascript/bootstrap.min.js' %}" ></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui.min.css' %}">
+	<script type="text/javascript" src="{% static 'javascript/jquery-ui.min.js'%}"></script>
+	<script type="text/javascript" src="{% static 'javascript/test.js' %}"></script>
+	<script type="text/javascript" src="{% static 'javascript/register.js' %}"></script>
+	<script type="text/javascript" src="{% static 'javascript/base.js' %}" ></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css'%}"> 
+	{% block footer %}
+
+	{% endblock %}
+</html>

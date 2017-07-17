@@ -1,0 +1,60 @@
+
+input+span{
+	float:right;
+	margin-left:100px;
+	color:red;
+	background-color:yellow;	
+}
+
+#submit:hover{
+	background-color:red;	
+}
+
+
+.main_form{
+	width:600px;
+}
+
+#submit{
+	margin:10px;
+	margin-left:200px;
+	width:200px;
+}
+
+#account_type-button,#joint_account-button,#gender-button{
+	float:right;
+	width:200px;
+	margin:10px;
+}
+
+input{
+	float:right;
+	width:200px;
+	margin:10px;
+}
+
+label{
+	float:left;
+	margin:10px;
+}
+
+input:hover{
+	border-color:#3CBC8D;;
+}
+
+input:focus{
+	background-color:lightblue;	
+}
+
+#submit_withdraw:hover{
+	background-color:red;
+}
+
+#submit_deposit:hover{
+	background-color:red;
+}
+
+#submit_withdraw,#submit_deposit{
+	margin-top:30px;
+}
+

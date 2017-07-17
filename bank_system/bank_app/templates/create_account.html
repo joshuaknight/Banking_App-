@@ -1,0 +1,175 @@
+{% extends "templates/base.html" %}
+
+{% block title %}Account Creation {% endblock %}
+
+{% block main_content %} 
+	<div class="container">		
+		<div class="main_form">			
+			<ul>
+				<li><a href="#wrapper_create">Create Account</a></li>
+				<li><a href="#wrapper_deposit">Deposit Into Account</a></li>
+				<li><a href="#wrapper_withdraw">Withdraw From Account</a></li>
+			</ul>
+
+			<div id="wrapper_create">
+
+				<div id="account_details">
+					<div class="row">
+						<label>Account Details</label>
+					</div>			
+					<div class="row">
+						<div class="col col-sm-10">
+							<label>Account Name</label>		
+							<input type="text" id="account_name"> 
+							<span id="help_text_acname"></span>
+						</div>					
+
+						<div class="col col-sm-10">
+							<label>Opening Balance</label>		
+							<input type="text" id="balance"> 					
+							<span id="help_text_balance"></span>
+						</div>																
+
+						<div class="col col-sm-10">
+							<label>Account Type</label>		
+							<select id="account_type">
+							{% for i in account_type %} 
+								<option >{{i}}</option>						
+							{% endfor %}
+							</select>		
+							<span id="help_text_account_type"></span>
+						</div>		
+								
+						<div class="col col-sm-10">
+							<label>Join Account</label>
+							<select id="joint_account">
+							{% for i in joint_acc %} 
+								<option id="joint_account">{{i}}</option>						
+							{% endfor %}
+							</select>						
+						<span id="help_text_joint_account"></span>
+						</div>
+					</div>
+				</div>
+
+				<div id="address_details">
+					<div class="row">
+						<label>Address Details</label>
+					</div>		
+					<div class="row">			
+						<div class="col col-sm-9">					
+							<label>Street No</label>														
+							<input placeholder="Street No" type="text" id="street_no">							
+							<span id="help_text_street_no"><span>
+						</div>		
+						<div class="col col-sm-9">
+							<label>Street Name</label>														
+							<input type="text" placeholder="Street Name" id="street_name">
+							<span id="help_text_street_name"></span>
+						</div>
+						<div class="col col-sm-9">	
+							<label>District</label>																	
+							<input type="text" placeholder="District" id="addr_district">
+							<span id="help_text_district"></span>
+						</div>	
+						<div class="col col-sm-9">
+							<label>State</label>														
+							<input type="text" placeholder="State" id="addr_state">
+							<span id="help_text_state"></span>										
+						</div>
+						<div class="col col-sm-9">
+							<label>Country</label>														
+							<input type="text" placeholder="Country" id="addr_country">
+							<span id="help_text_country"></span>			
+						</div>
+						<div class="col col-sm-9">
+							<label>Pincode</label>														
+							<input type="text" placeholder="Pincode" id="addr_pincode">
+							<span id="help_text_pincode"></span>			
+						</div>
+					</div>
+				</div>	
+
+				<div id="customer_details">
+					<div class="row">
+						<label>Customer Details</label>
+					</div>
+
+					<div class="row">
+						<div class="col col-sm-9">
+							<label>Phone No</label>		
+							<input type="text" placeholder="eg:917595595959" id="phone"> 
+							<span id="help_text_phone"></span>
+						</div>					
+					
+						<div class="col col-sm-9">
+							<label>Email</label>
+							<input type="text" placeholder="eg:g.johusa@gmail.com" id="email"> 
+							<span id="help_text_email"></span>
+						</div>		
+
+						<div class="col col-sm-9">
+							<label>Name</label>
+							<input type="text" placeholder="eg:G.Joshua" id="name"> 
+							<span id="help_text_name"></span>
+						</div>		
+					
+						<div class="col col-sm-9">
+							<label>DOB</label>
+							<input type="text" placeholder="eg:dd-mm-yyyy" id="age"> 
+							<span id="help_text_age" ></span>
+						</div>	
+							
+						<div class="col col-sm-9">
+							<label>Gender</label>
+							<select id="gender">
+							{% for i in gender %}
+								<option>{{i}}</option>
+							{% endfor %}
+							</select>
+							<span id="help_text_gender"></span>					
+						</div>		
+					</div>			
+				</div>			
+
+				<div class="row">
+					<button type="button" id="submit" class="btn btn-success">Submit</button>
+				</div>		
+			</div>			
+			<div id="wrapper_deposit">			
+				<div class="col col-sm-9">
+					<label>Account No</label>
+					<input type="text" id="acc_no">
+				</div>
+				<div class="col col-sm-9">
+					<label>Password</label>
+					<input type="password" id="password">
+				</div>
+				<div class="row">
+					<button type="button" id="submit_deposit" class="btn btn-success">Add Money</button>
+				</div>
+			</div>
+
+			<div id="wrapper_withdraw">
+				<div class="col col-sm-9">
+					<label>Account No</label>
+					<input type="text" id="acc_no">
+				</div>
+				<div class="col col-sm-9">
+					<label>Password</label>
+					<input type="password" id="password">
+				</div>			
+				<div class="row">
+					<button type="button" id="submit_withdraw" class="btn btn-success">Withdraw Money</button>
+				</div>
+			</div>				
+		</div>
+	</div>	
+
+{% endblock %}
+
+{% block footer %}
+	
+	
+
+{% endblock %}
